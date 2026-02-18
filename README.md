@@ -39,11 +39,3 @@ Optional overrides:
 - extra env files: `uv run monitor_openreview.py --env-file prod.env`
 - disable default `.env`: `uv run monitor_openreview.py --no-default-env`
 
-## 4) Publish to GitHub
-
-```bash
-git init
-git add .
-git commit -m "Initial openreview monitor"
-gh repo create <your-repo-name> --private --source=. --remote=origin --push
-```
