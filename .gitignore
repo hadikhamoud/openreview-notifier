@@ -1,0 +1,8 @@
+.env
+.env.*
+!.env.example
+monitor.toml
+!monitor.toml.example
+.openreview_watch_state.json
+__pycache__/
+.ruff_cache/

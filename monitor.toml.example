@@ -1,0 +1,44 @@
+[openreview]
+# Use either forum_id directly or set url and let it be parsed.
+# Example: https://openreview.net/forum?id=<forum_id>
+forum_id = ""
+note_id = ""
+url = ""
+email = "you@example.com"
+password = ""
+api_baseurl = "https://api2.openreview.net"
+interval_minutes = 10
+state_file = ".openreview_watch_state.json"
+
+[webhook]
+on_change = true
+test_now = false
+timeout_seconds = 10
+signing_secret = ""
+
+[webhook.headers]
+Authorization = "Bearer replace-me"
+
+[[webhook.targets]]
+url = "https://example.com/webhook-a"
+
+[webhook.targets.headers]
+X-Webhook-Key = "replace-a"
+
+[[webhook.targets]]
+url = "https://example.com/webhook-b"
+
+[webhook.targets.headers]
+X-Webhook-Key = "replace-b"
+
+[email]
+on_change = false
+heartbeat_minutes = 0
+from = ""
+to = ["you@example.com"]
+sendgrid_api_key = ""
+
+[debug]
+print_reviews = false
+verbose = false
+debug_note_types = false
